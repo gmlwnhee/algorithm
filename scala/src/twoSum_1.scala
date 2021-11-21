@@ -4,17 +4,11 @@ object twoSum {
     val target = 6
     //    val input = Array(2,7,11,15)
     //    val target = 9
-    val array =Solution.twoSum(input, target)
+    val array =twoSum(input, target)
     println(s"My answer : $array")
     printArray(array)
   }
 
-  def printArray(ints: Array[Int]): Unit ={
-    ints.foreach(i => print(i + " "))
-  }
-}
-
-object Solution {
   def twoSum(nums: Array[Int], target: Int): Array[Int] = {
     val map = scala.collection.mutable.Map[Int, Int] ()
     var count = 0;
@@ -47,5 +41,9 @@ object Solution {
       })
     })
     arr
+  }
+
+  def printArray(ints: Array[Int]): Unit ={
+    ints.foreach(i => print(i + " "))
   }
 }

@@ -4,14 +4,11 @@ object palindromeNumber_9 {
     val input2: Int = 100
 //    val input2: Int = 10222001
 //    val input: Int = 1234554321
-    val bool =Solution.isPalindrome(input)
-    val bool2 =Solution.isPalindrome(input2)
+    val bool =isPalindrome(input)
+    val bool2 =isPalindrome(input2)
     println(s"My answer : $bool $bool2")
   }
 
-}
-
-object Solution {
   def isPalindrome(x: Int): Boolean = {
     if(x < 0) return false
     val charArr = x.toString.toCharArray
@@ -25,22 +22,22 @@ object Solution {
     }
     true
 
-//    charArr.forall(char => {
-//      // 같은 숫자가 있을 때 indexOf 사용X!!
-//      val index = charArr.indexOf(char)
-//      (index <= size) match {
-//        case true => if(charArr(index).equals(charArr(charArr.size - 1 - index))) {
-//          print(true)
-//          true
-//        }
-//                      else {
-//          print(false)
-//          false
-//        }
-//        case false =>  print(false)
-//          false
-//      }
-//    })
+    //    charArr.forall(char => {
+    //      // 같은 숫자가 있을 때 indexOf 사용X!!
+    //      val index = charArr.indexOf(char)
+    //      (index <= size) match {
+    //        case true => if(charArr(index).equals(charArr(charArr.size - 1 - index))) {
+    //          print(true)
+    //          true
+    //        }
+    //                      else {
+    //          print(false)
+    //          false
+    //        }
+    //        case false =>  print(false)
+    //          false
+    //      }
+    //    })
   }
 
   // Other Solution 1
