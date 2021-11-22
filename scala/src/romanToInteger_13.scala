@@ -9,7 +9,6 @@ object romanToInteger_13 {
   }
   def romanToInt(s: String): Int = {
     val map = mutable.HashMap[Char, Int]()
-    var sum : Int = 0
     map.put('I', 1)
     map.put('V', 5)
     map.put('X', 10)
@@ -17,6 +16,14 @@ object romanToInteger_13 {
     map.put('C', 100)
     map.put('D', 500)
     map.put('M', 1000)
+
+    // The above code is faster than these, and these are quick order
+//    val map = Map(('I', 1),('V', 5),('X', 10),('L', 50),('C', 100),('D', 500),('M', 1000))
+//    val map = Map('I' -> 1, 'V' -> 5, 'X' -> 10, 'L' -> 50, 'C' -> 100, 'D' -> 500, 'M' -> 1000)
+//    val map = Map[Char, Int](('I', 1),('V', 5),('X', 10),('L', 50),('C', 100),('D', 500),('M', 1000))
+//    val map = Map[Char, Int]('I' -> 1, 'V' -> 5, 'X' -> 10, 'L' -> 50, 'C' -> 100, 'D' -> 500, 'M' -> 1000)
+
+    var sum : Int = 0
 
     for(i <- 0 to s.length-2) {
       val n : Int = s(i) match {
