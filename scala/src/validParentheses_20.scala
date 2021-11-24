@@ -42,7 +42,7 @@ object validParentheses_20 {
     stack.isEmpty
   }
 
-  // Other solution
+  // Other solution 1
   def isValid3(s: String): Boolean = {
     val stack = scala.collection.mutable.Stack[Char]()
     for (ch <- s) ch match {
@@ -50,6 +50,15 @@ object validParentheses_20 {
       case _ =>  if (stack.isEmpty || math.abs(ch - stack.pop) > 2) return false
     }
     stack.isEmpty
+  }
+
+  // Other solution 2
+  def isValid4(s: String): Boolean = {
+    val terminals = Array("()", "[]", "{}")
+    s.foldLeft(List[Char]()){(a,v) => a match {
+      case x :: xs if (terminals.contains("" + x + v)) => xs
+      case _ => v +: a
+    }}.isEmpty
   }
 
 }
