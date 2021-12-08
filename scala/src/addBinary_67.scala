@@ -33,6 +33,33 @@ object addBinary_67 {
     str.reverse
   }
 
+  // method changing binary to decimal, but it doesn't convert large number ex) E29
+  def binaryToDecimal(str: String): Double = {
+    val reverseStr = str.reverse
+    var decVal : Double = 0
+    for ( i <- 0 to str.size-1) {
+      if(reverseStr(i).equals('1'))
+        decVal += math.pow(2,i)
+    }
+    println(decVal)
+    decVal
+  }
+
+  def decimalToBinary(i: Double): String = {
+    var str = ""
+    if(i == 0) return str
+    else if(i % 2 == 0) str = "0"
+    else str = "1"
+    str += decimalToBinary((i/2).floor)
+    str
+  }
+
+  def addBinary1(a: String, b: String): String = {
+    if(a.equals("0") && b.equals("0")) return "0"
+    val sum = binaryToDecimal(a) + binaryToDecimal(b)
+    decimalToBinary(sum).reverse
+  }
+
   // Other solution
   def addBinary2(a: String, b: String): String = {
     (BigInt.apply(a, 2) + BigInt.apply(b, 2)).toString(2)
