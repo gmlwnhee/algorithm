@@ -1,4 +1,4 @@
-object palindromeNumber_9 {
+object PalindromeNumber_9 {
   def main(args: Array[String]) {
     val input: Int = 10
     val input2: Int = 100

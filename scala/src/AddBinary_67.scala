@@ -1,4 +1,4 @@
-object addBinary_67 {
+object AddBinary_67 {
   def main(args: Array[String]): Unit = {
     val inputA = "101111"
     val inputB = "10"

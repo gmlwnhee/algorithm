@@ -1,4 +1,4 @@
-object longestCommonPrefix_14 {
+object LongestCommonPrefix_14 {
   def main(args: Array[String]): Unit = {
     val input = Array[String]("crt", "cat")
 //    val input = Array[String]("flower", "flow", "flight")

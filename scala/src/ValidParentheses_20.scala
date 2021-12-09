@@ -1,6 +1,6 @@
 import scala.collection.mutable.Stack
 
-object validParentheses_20 {
+object ValidParentheses_20 {
   def main(args: Array[String]): Unit = {
     val input = "(){}}{"
 //    val input = "("

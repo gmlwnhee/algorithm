@@ -1,4 +1,4 @@
-object removeElement_27 {
+object RemoveElement_27 {
   def main(args: Array[String]): Unit = {
     val inputArray = Array(1,2,3,4,3)
     val input = 3

@@ -1,6 +1,6 @@
 import scala.collection.mutable
 
-object romanToInteger_13 {
+object RomanToInteger_13 {
   def main(args: Array[String]): Unit = {
     val num = romanToInt("IX")
     val num2 = romanToInt("LVIII")

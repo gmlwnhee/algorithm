@@ -1,4 +1,4 @@
-public class lengthofLastWord_java_58 {
+public class LengthofLastWord_java_58 {
     public static void main(String[] args) {
         String input = "hello everyone";
         int result = lengthOfLastWord(input);

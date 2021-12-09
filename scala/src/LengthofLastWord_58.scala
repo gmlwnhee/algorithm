@@ -1,4 +1,4 @@
-object lengthofLastWord_58 {
+object LengthofLastWord_58 {
   def main(args: Array[String]): Unit = {
     val input = "Hello Everyone"
     val result = lengthOfLastWord(input)

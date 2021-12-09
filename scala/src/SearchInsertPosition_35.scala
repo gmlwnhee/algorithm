@@ -1,4 +1,4 @@
-object searchInsertPosition_35 {
+object SearchInsertPosition_35 {
   def main(args: Array[String]): Unit = {
     val inputNums = Array(3,6,7,8,10)
 //    val inputNums = Array(-1,1,3,5)

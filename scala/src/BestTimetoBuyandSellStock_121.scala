@@ -43,7 +43,7 @@ object BestTimetoBuyandSellStock_121 {
     chk
   }
 
-  // Other Solution1
+  // Other solution1
   def maxProfit1(prices: Array[Int]): Int = {
     var min = Int.MaxValue
 
@@ -58,7 +58,7 @@ object BestTimetoBuyandSellStock_121 {
     maxProfit
   }
 
-  // Other Solution2
+  // Other solution2
   def maxProfit2(prices: Array[Int]): Int =
     prices.foldLeft((Int.MaxValue, 0)) {
       case ((minPrice, maxProfit), price) => (minPrice min price, maxProfit max (price - minPrice))

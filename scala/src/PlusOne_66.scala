@@ -1,6 +1,6 @@
 import scala.util.control.Breaks._
 
-object plusOne_66 {
+object PlusOne_66 {
   def main(args: Array[String]): Unit = {
    val digits =  Array(1,9,9)
     val result = plusOne(digits)
