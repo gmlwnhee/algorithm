@@ -6,7 +6,7 @@ object twoSum {
     //    val target = 9
     val array =twoSum(input, target)
     println(s"My answer : $array")
-    printArray(array)
+    BasicFunction.printArray(array)
   }
 
   def twoSum(nums: Array[Int], target: Int): Array[Int] = {
@@ -43,7 +43,4 @@ object twoSum {
     arr
   }
 
-  def printArray(ints: Array[Int]): Unit ={
-    ints.foreach(i => print(i + " "))
-  }
 }

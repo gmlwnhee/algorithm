@@ -5,7 +5,7 @@ object PlusOne_66 {
    val digits =  Array(1,9,9)
     val result = plusOne(digits)
     println(result)
-    printArray(result)
+    BasicFunction.printArray(result)
   }
 
   def plusOne(digits: Array[Int]): Array[Int] = {
@@ -22,10 +22,6 @@ object PlusOne_66 {
       arr(arr.length -1) = arr.last + 1
     }
     arr
-  }
-
-  def printArray(ints: Array[Int]): Unit ={
-    ints.foreach(i => print(i + " "))
   }
 
   // Other solution 1 - used break
