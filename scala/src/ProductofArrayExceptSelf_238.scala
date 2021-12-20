@@ -22,6 +22,9 @@ object ProductofArrayExceptSelf_238 {
       answer = nums.zipWithIndex.filter{ _._2 != i }.map{ _._1 }.product +: answer
 //      answer = nums.filter(num => !num.equals(nums(i))).product +: answer
     }
+    // Similar to above
+    nums.indices.map(x=>{
+      nums.zipWithIndex.filter{ _._2 != x }.map{ _._1 }.product}).toArray
 
     //    // prefix sum ex)(1,2,3,4) => (1,2,6,12)
     //    val answer = Array.ofDim[Int](nums.length)
