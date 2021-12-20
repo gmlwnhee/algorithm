@@ -24,10 +24,25 @@ object Numberof1Bits_191 {
   // Other solution2
   def hammingWeight2(n: Int): Int = {
     def loop(num: Int, acc: Int): Int = {
+      // acc means count
       println(num + "  " + num.toBinaryString + "  " + acc)
       if (num == 0) acc else loop(num & (num-1), acc + 1)
     }
 
     loop(n, 0)
+  }
+
+  // Other solution3
+  def hammingWeight3(n: Int): Int = {
+    var result = 0
+    var position = 0
+    var num = n
+    while(position < 32){
+      // find num & 1 is true and move one step
+      result += num & 1
+      num = num >> 1
+      position += 1
+    }
+    result
   }
 }
