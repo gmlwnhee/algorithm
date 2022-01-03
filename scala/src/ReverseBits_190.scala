@@ -52,6 +52,8 @@ object ReverseBits_190 {
     var r = 0
     (1 to 32).map( i => {
       r = (r << 1) | (n & 1)
+      // The >> operator preserves the sign (sign-extends), while >>> zeroes the leftmost bits
+      // reference : https://stackoverflow.com/questions/17205422/difference-between-and-in-scala
       n = n >>> 1
     })
     r
